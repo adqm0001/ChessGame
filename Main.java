@@ -4,12 +4,13 @@ import java.awt.*;
 public class Main extends JFrame {
     public static void main(String[] args){
         JFrame jf = new JFrame("Chess");
+        GameWindow gameWindow = new GameWindow();
+        jf.add(gameWindow);
+        jf.pack();
+
         jf.setResizable(false);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setVisible(true);
         jf.setLocationRelativeTo(null);
-
-        Board bd = new Board();
-        jf.add(bd);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
